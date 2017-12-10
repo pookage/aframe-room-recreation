@@ -4,7 +4,7 @@ AFRAME.registerPrimitive("a-furniture", {
 			primitive: "box",
 		},
 		material: {
-			color: "#444"
+			color: "#aaa"
 		},
 		y_offsetter: {}
 	},

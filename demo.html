@@ -8,40 +8,80 @@
 	<script src="js/geometries/room-geometry.js"></script>
 	<script src="js/components/room.js"></script>
 	<script src="js/components/furniture.js"></script>
+	<script>
+		window.addEventListener("load", () => {
+			AFRAME.scenes[0].addEventListener("click", () => {
+				//AFRAME.scenes[0].canvas.webkitRequestFullScreen();
+			})
+		})
+	</script>
 </head>
 <body>
 	<a-scene>
 
+		<a-sky
+			color="#fff">
+		</a-sky>
+
 		<a-pook-room
 			color="#ccc"
 			position="0 0 "
-			scale="2 2 2">
+			scale="1 1 1">
+
+			<!--MOVABLES-->
 			<a-furniture
-				name="bed"
+				id="bed"
 				height="0.74"
 				width="1.40"
 				depth="2"
 				rotation="0 90 0"
 				position="1.22 0 -1">
 			</a-furniture>
+			<a-entity>
+				<a-furniture
+					id="desk"
+					height="0.03"
+					width="1.80"
+					depth="1.20"
+					position="-1.338 0.6 1.034">
+				</a-furniture>
+				<a-furniture
+					id="chair"
+					height="1"
+					width="0.6"
+					depth="0.5"
+					rotation="0 20 0"
+					position="-1.4 0 1.68">
+				</a-furniture>
+			</a-entity>
 			<a-furniture
-				name="clothes-rail"
+				id="clothes-rail"
 				height="1.50"
 				width="1.20"
 				depth="0.6"
 				position="-1.26 0 -1.8">
 			</a-furniture>
 			<a-furniture
-				name="door"
+				id="armchair"
+				width="0.75"
+				height="1.1"
+				depth="0.80"
+				rotation="0 80 0"
+				position="1.074 0 1.684">
+			</a-furniture>
+
+			<!--IMMOVABLES-->
+			<a-furniture
+				id="door"
 				height="2"
 				width="0.85"
 				depth="0.04"
-				color="#aaa"
+				color="#ccc"
 				rotation="0 90 0"
-				position="1.5 0 1">
+				position="1.5 0 0.9">
 			</a-furniture>
 			<a-furniture
-				name="right-window"
+				id="right-window"
 				height="1.55"
 				width="0.97"
 				depth="0.11"
@@ -51,7 +91,7 @@
 				position="-2.275 0.73 -0.975">
 			</a-furniture>
 			<a-furniture
-				name="left-window"
+				id="left-window"
 				height="1.55"
 				width="0.97"
 				depth="0.11"
@@ -64,8 +104,7 @@
 		
 		<!--USER-->
 		<a-camera
-			position="0 4 0"
-			rotation="-30 0 0"
+			position="0 1.5 0"
 			fov="60">
 		</a-camera>
 	</a-scene>
