@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Room Recreation Demo</title>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	<script src="js/geometries/room-geometry.js"></script>
+	<script src="js/components/room.js"></script>
+</head>
+<body>
+	<a-scene>
+
+		<a-pook-room
+			color="#ccc"
+			position="0 0 "
+			scale="2 2 2">		
+		</a-pook-room>
+		
+		<!--USER-->
+		<a-camera
+			position="0 7 0"
+			rotation="-90 0 0"
+			fov="60">
+		</a-camera>
+	</a-scene>
+</body>
+</html>
