@@ -11,6 +11,8 @@ AFRAME.registerPrimitive("a-furniture", {
 	mappings: {
 		height: "geometry.height",
 		width: "geometry.width",
-		length: "geometry.depth"
+		depth: "geometry.depth",
+		color: "material.color",
+		opacity: "material.opacity"
 	}
 });
